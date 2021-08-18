@@ -1,0 +1,30 @@
+#include frex:shaders/api/vertex.glsl
+#include frex:shaders/api/view.glsl
+
+#ifdef VANILLA_LIGHTING
+  out vec2 v_light;
+  out float v_aoShade;
+#endif
+
+out vec3 N;
+out vec4 v_shadowViewPos;
+
+void frx_writePipelineVertex(in frx_VertexData data)
+{
+  if (frx_modelOriginType() == MODEL_ORIGIN_SCREEN) {
+    // Position of hand and GUI items
+    gl_Position = frx_guiViewProjectionMatrix() * data.vertex;
+  } else {
+    // Position of world objects
+    data.vertex += frx_modelToCamera();
+    gl_Position = frx_viewProjectionMatrix() * data.vertex;
+  }
+  v_shadowViewPos = frx_shadowViewMatrix() * data.vertex;
+
+  N=data.normal;
+
+  #ifdef VANILLA_LIGHTING
+    v_light = data.light;
+    v_aoShade = data.aoShade;
+  #endif
+}

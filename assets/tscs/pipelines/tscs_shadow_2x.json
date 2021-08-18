@@ -1,0 +1,10 @@
+{
+	nameKey: "pipeline.tscs_shadow_2x.name",
+	descriptionKey: "pipeline.tscs_shadow_2x.desc",
+
+	include: [
+		"tscs:pipeline/final.json",
+		"tscs:pipeline/shadow_fixed.json",
+		"tscs:pipeline/skyshadow_2x.json"
+	]
+}

@@ -1,0 +1,10 @@
+{
+	"pipeline.tscs_lights.name": "TSCS  Low",
+	"pipeline.tscs_lights.desc": "TSCS that without shadows",
+	"pipeline.tscs_shadow_1x.name": "TSCS  Medium",
+	"pipeline.tscs_shadow_1x.desc": "TSCS that with shadows 1x",
+	"pipeline.tscs_shadow_2x.name": "TSCS  High",
+	"pipeline.tscs_shadow_2x.desc": "TSCS that with shadows 2x",
+	"pipeline.tscs_shadow_4x.name": "TSCS  Extra",
+	"pipeline.tscs_shadow_4x.desc": "TSCS that with shadows 4x"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "TSCS",
+  "version": 1,
+  "conf": {
+	"WavyWaterModel": true,
+	"WavyWaterIntensity": {
+	  "default": 5,
+	  "min": 1,
+	  "max": 15
+	}
+  }
+}

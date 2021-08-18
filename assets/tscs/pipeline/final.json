@@ -1,0 +1,34 @@
+{
+  materialProgram: {
+    vertexSource: "tscs:shaders/renderchunk.vertex",
+    fragmentSource: "tscs:shaders/renderchunk.fragment",
+    samplers: [],
+    samplerImages: []
+  },
+
+  drawTargets: {
+    solidTerrain: "main_gbuffer",
+    translucentTerrain: "main_gbuffer",
+    translucentEntity: "main_gbuffer",
+    weather: "main_gbuffer",
+    clouds: "main_gbuffer",
+    translucentParticles: "main_gbuffer"
+  },
+  
+  defaultFramebuffer: "main_gbuffer",
+  
+  beforeWorldRender: {
+    passes: [
+      {
+        // clears the main gbuffer at the start of each frames
+        name: "clear_main_gbuffer",
+        framebuffer: "main_gbuffer",
+        program: "frex_clear"
+      }
+    ]
+  },
+
+  include: [
+    "tscs:pipeline/main.json"
+  ]
+}

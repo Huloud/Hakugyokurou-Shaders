@@ -1,0 +1,10 @@
+{
+	"pipeline.tscs_lights.name": "TSCS  低配",
+	"pipeline.tscs_lights.desc": "TSCS 没有阴影",
+	"pipeline.tscs_shadow_1x.name": "TSCS  中配",
+	"pipeline.tscs_shadow_1x.desc": "TSCS 有1x阴影",
+	"pipeline.tscs_shadow_2x.name": "TSCS  高配",
+	"pipeline.tscs_shadow_2x.desc": "TSCS 有2x阴影",
+	"pipeline.tscs_shadow_4x.name": "TSCS  极限",
+	"pipeline.tscs_shadow_4x.desc": "TSCS 有4x阴影"
+}
